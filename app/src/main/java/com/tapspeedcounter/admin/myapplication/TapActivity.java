@@ -193,6 +193,7 @@ public class TapActivity extends AppCompatActivity {
             }
         });
     }
+    //The default countdown timer sucks
     public BetterCountDownTimer mainCounter(final int interval) {
         speedValue = getSpeed()+"";
         return new BetterCountDownTimer(interval, 100, 1000) {
@@ -210,7 +211,6 @@ public class TapActivity extends AppCompatActivity {
                 setText(timer, timeRemain);
                 setText(speedTextView, speedValue);
                 setColorTapSpeed(speedTextView, getSpeed());
-                
             }
 
             public void onFinish() {
