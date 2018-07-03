@@ -210,6 +210,7 @@ public class TapActivity extends AppCompatActivity {
                 setText(timer, timeRemain);
                 setText(speedTextView, speedValue);
                 setColorTapSpeed(speedTextView, getSpeed());
+                
             }
 
             public void onFinish() {
