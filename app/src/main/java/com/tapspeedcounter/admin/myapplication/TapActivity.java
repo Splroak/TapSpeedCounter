@@ -193,7 +193,7 @@ public class TapActivity extends AppCompatActivity {
             }
         });
     }
-    //The default countdown timer sucks, so I have to create a customized one
+    //The default countdown timer sucks, so I have to create a customized one.
     public BetterCountDownTimer mainCounter(final int interval) {
         speedValue = getSpeed()+"";
         return new BetterCountDownTimer(interval, 100, 1000) {
