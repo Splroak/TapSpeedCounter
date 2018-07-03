@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tapspeedcounter.admin.tapspeedcounter">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/tap_icon"
+        android:label="@string/real_app_name"
+        android:roundIcon="@mipmap/tap_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:versionCode="6"
+        android:versionName="v1.4">
+
+        <activity android:name="com.tapspeedcounter.admin.myapplication.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tapspeedcounter.admin.myapplication.TapActivity"
+            android:label="@string/tap_activity"
+            android:parentActivityName="com.tapspeedcounter.admin.myapplication.MainActivity" />
+        <activity
+            android:name="com.tapspeedcounter.admin.myapplication.ResultActivity"
+            android:label="@string/result_activity"
+            android:parentActivityName="com.tapspeedcounter.admin.myapplication.MainActivity" />
+    </application>
+
+</manifest>

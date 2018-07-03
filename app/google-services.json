@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "652342791042",
+    "firebase_url": "https://myapplication-c4795.firebaseio.com",
+    "project_id": "myapplication-c4795",
+    "storage_bucket": "myapplication-c4795.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652342791042:android:2167c3d37960250c",
+        "android_client_info": {
+          "package_name": "com.tapspeedcounter.admin.tapspeedcounter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652342791042-kk0pg1n4cg4lmfc6o6auo4huolrle778.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tapspeedcounter.admin.tapspeedcounter",
+            "certificate_hash": "33a88c2b1a3d96a7cac3a205ae25a4b3c0702643"
+          }
+        },
+        {
+          "client_id": "652342791042-vosmt1cqrca0l8s8919k16kt5f5es77m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3MKj3L7ZYoXF4ddB1kIDzhK5wKrXVWzo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "652342791042-vosmt1cqrca0l8s8919k16kt5f5es77m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

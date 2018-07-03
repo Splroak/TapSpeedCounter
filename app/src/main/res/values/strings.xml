@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="tap_activity">TapActivity</string>
+    <string name="result_activity">ResultActivity</string>
+    <string name="finger">Number of finger:</string>
+    <string name="interval">Interval:</string>
+    <string name="one_finger">1 Finger</string>
+    <string name="two_fingers">2 Fingers</string>
+    <string name="thirty_seconds">30 Seconds</string>
+    <string name="fifteen_seconds">15 Seconds</string>
+    <string name="done">Done</string>
+    <string name="one">1</string>
+    <string name="yes">Y</string>
+    <string name="notification">Notification</string>
+    <string name="whole_screen">Whole Screen</string>
+    <string name="testing">Testing</string>
+    <string name="again">Try again</string>
+    <string name="ready">GO!</string>
+    <string name="times_up">TIME\'S UP</string>
+    <string name="other_options">Other Options</string>
+    <string name="your_speed_is">Your tap speed is:</string>
+    <string name="tap_per_second">tap/s</string>
+    <string name="real_app_name">Tap Speed Counter</string>
+    <string name="pref_name">OPTIONS</string>
+    <string name="tap_checked">TAPCHECKED</string>
+    <string name="time_checked">TIMECHECKED</string>
+</resources>
