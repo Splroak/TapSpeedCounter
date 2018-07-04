@@ -33,6 +33,7 @@ public class TapActivity extends AppCompatActivity {
     private Button twoFingerTap;
     private String speedValue;
     private String speedValueToSetText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,14 +50,13 @@ public class TapActivity extends AppCompatActivity {
         SharedPreferences radioButtonPref = PreferenceManager.getDefaultSharedPreferences(this);
         getTapCheckedOption(radioButtonPref);
         getTimeCheckedOption(radioButtonPref);
-
+/** If timer get to 1000 stop
+ *  If the countdown prepare hasn't run, don't run the button yet
+ *  stop when it says time's up
+ */
         oneFingerTap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /** If timer get to 1000 stop
-                 *  If the countdown prepare hasn't run, don't run the button yet
-                 *  stop when it says time's up
-                 */
                 if (!timer.getText().equals(getString(R.string.times_up))
                         && millisDouble != 1000 && millisDouble != 0) {
                     tapCount++;
@@ -87,6 +87,7 @@ public class TapActivity extends AppCompatActivity {
                 break;
         }
     }
+
     //Decide what time to show
     public void getTimeCheckedOption(SharedPreferences sharePref) {
         int checkedId = sharePref.getInt(getString(R.string.time_checked), 0);
@@ -102,7 +103,7 @@ public class TapActivity extends AppCompatActivity {
         }
     }
 
-    //Get the speed duh...
+    //Get the speed duh....
     public static double getSpeed() {
         double speed;
         if (timeElapsed < 1) {
@@ -122,7 +123,7 @@ public class TapActivity extends AppCompatActivity {
 
     // This method is used to take the setText to the main thread
     // rather than doing it in the background thread(Timer).
-    private void setText(final TextView text,String value) {
+    private void setText(final TextView text, String value) {
         speedValueToSetText = value;
         runOnUiThread(new Runnable() {
             @Override
@@ -151,8 +152,9 @@ public class TapActivity extends AppCompatActivity {
             }
         }.start();
     }
+
     //Set color of the timer to RED when done
-    public void setColorTimer(final TextView textView,final int color) {
+    public void setColorTimer(final TextView textView, final int color) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -160,42 +162,44 @@ public class TapActivity extends AppCompatActivity {
             }
         });
     }
+
     //Set color of the speed based on its magnitude
-    public void setColorTapSpeed(final TextView textView,final double speed) {
+    public void setColorTapSpeed(final TextView textView, final double speed) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                if(speed < 1){
+                if (speed < 1) {
                     textView.setTextColor(getResources().getColor(R.color.blue));
-                } else if (speed < 2){
+                } else if (speed < 2) {
                     textView.setTextColor(getResources().getColor(R.color.cyan));
-                } else if (speed < 3){
+                } else if (speed < 3) {
                     textView.setTextColor(getResources().getColor(R.color.teal));
-                } else if (speed < 4){
+                } else if (speed < 4) {
                     textView.setTextColor(getResources().getColor(R.color.green));
-                } else if (speed < 5){
+                } else if (speed < 5) {
                     textView.setTextColor(getResources().getColor(R.color.light_green));
-                } else if (speed < 6){
+                } else if (speed < 6) {
                     textView.setTextColor(getResources().getColor(R.color.lime));
-                } else if (speed < 7){
+                } else if (speed < 7) {
                     textView.setTextColor(getResources().getColor(R.color.yellow));
-                } else if (speed < 8){
+                } else if (speed < 8) {
                     textView.setTextColor(getResources().getColor(R.color.amber));
-                } else if (speed < 9){
+                } else if (speed < 9) {
                     textView.setTextColor(getResources().getColor(R.color.orange));
-                } else if (speed < 10){
+                } else if (speed < 10) {
                     textView.setTextColor(getResources().getColor(R.color.deep_orange));
-                } else if (speed < 11){
+                } else if (speed < 11) {
                     textView.setTextColor(getResources().getColor(R.color.red2));
-                } else if (speed < 12){
+                } else if (speed < 12) {
                     textView.setTextColor(getResources().getColor(R.color.pink));
                 }
             }
         });
     }
-    //The default countdown timer sucks, so I have to create a customized one.
+
+    //The default countdown timer sucks, so I have to create a customized one..
     public BetterCountDownTimer mainCounter(final int interval) {
-        speedValue = getSpeed()+"";
+        speedValue = getSpeed() + "";
         return new BetterCountDownTimer(interval, 100, 1000) {
 
             public void onTick(long millisUntilFinished) {
@@ -216,7 +220,7 @@ public class TapActivity extends AppCompatActivity {
             public void onFinish() {
                 setText(speedTextView, speedValue);
                 setText(timer, getString(R.string.times_up));
-                setColorTimer(timer,Color.RED);
+                setColorTimer(timer, Color.RED);
 
                 runOnUiThread(new Runnable() {
                     public void run() {
