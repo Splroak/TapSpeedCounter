@@ -111,6 +111,7 @@ public class TapActivity extends AppCompatActivity {
         } else {
             speed = tapCount / (timeElapsed + 1);
         }
+        Log.v("conac", "dit me may");
         double speedRounded = twoDecimalRounding(speed);
         return speedRounded;
     }
